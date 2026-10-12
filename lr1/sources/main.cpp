@@ -8,11 +8,11 @@ static T readInput(const std::string &request)
     T res;
     while (true) {
         std::cout << request;
-        std::cin.clear();
         std::cin >> res;
         if (not std::cin) {
             std::cout << "Wrong input" << std::endl;
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        	std::cin.clear();
+        	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             continue;
         }
         return res;
